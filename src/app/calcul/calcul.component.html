@@ -1,0 +1,29 @@
+<div class="card">
+<div class="card-header">
+    <h1 align="center">Calculatrice</h1>
+</div>
+<div class="card-body">
+    <div class="form-group">
+        <label> Nombre A :</label>
+        <input type="number"  [(ngModel)]="a" name="a" class="form-controler  marginLeft">
+     
+    </div>
+    <div class="form-group">
+        
+        <label>Nombre B :</label>
+        <input type="number" [(ngModel)]="b" name="b" class="form-controler marginLeft">
+    </div>
+    <div class="form-group">
+        <div class="form-group" *ngIf="valide==true">
+        <label>Résultat : {{result}}  </label>
+    </div>
+        <p *ngIf="valide==false">Le nombre A ou B invalide ..!</p>
+    </div>
+</div>
+<div class="card-footer">
+<button class="btn btn-info" (click)="add()">+</button>
+<button class="btn btn-warning marginLeft" (click)="soust()">-</button>
+<button class="btn btn-success marginLeft" (click)="mult()">*</button>
+<button class="btn btn-danger marginLeft" (click)="div()">/</button>
+</div>
+</div>
